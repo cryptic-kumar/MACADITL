@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: clinical-intelligence-orchestrator
+  datasource:
+    url: jdbc:postgresql://localhost:5432/clinical_intelligence
+    username: clinical_user
+    password: change-me
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+
+agents:
+  clinical-data-intelligence:
+    base-url: http://localhost:8000
+  chroma:
+    base-url: http://localhost:8001
