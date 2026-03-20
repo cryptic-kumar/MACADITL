@@ -1,5 +1,6 @@
+from app.models.domain_models import ExplainabilityDetails, SignalEvidence
 from app.models.request_models import ClinicalTextRequest
-from app.models.response_models import ClinicalTextResponse, ExplainabilityDetails, SignalEvidence
+from app.models.response_models import ClinicalTextResponse
 
 
 class ClinicalTextPipeline:
